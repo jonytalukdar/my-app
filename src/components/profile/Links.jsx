@@ -1,20 +1,20 @@
 import React from 'react';
 
-const Links = () => (
+const Links = (props) => (
   <div className="Links">
     <h3>Social Link</h3>
     <ul>
       <li>
-        <a href="#">Facebook</a>
+        <a href="#">{props.linkA}</a>
       </li>
       <li>
-        <a href="#">Github</a>
+        <a href="#">{props.linkB}</a>
       </li>
       <li>
-        <a href="#">Twitter</a>
+        <a href="#">{props.linkC}</a>
       </li>
       <li>
-        <a href="#">LinkedIn</a>
+        <a href="#">{props.linkD}</a>
       </li>
     </ul>
   </div>
