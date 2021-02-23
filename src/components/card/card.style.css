@@ -1,0 +1,27 @@
+.card {
+  background-color: #ddd;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h3,
+p {
+  margin: 10px 0;
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  font-weight: 400;
+  border: none;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
