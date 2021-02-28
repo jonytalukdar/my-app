@@ -8,11 +8,18 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => setCountry(data));
   }, []);
+
+  const handleClick = (country) => {
+    console.log('hi', country);
+  };
+
   return (
     <div className="App">
+      <h1>Country added : </h1>
       {country.map((countryDetails) => (
         <Country
           country={countryDetails}
+          handleClick={handleClick}
           key={countryDetails.alpha3Code}
         ></Country>
       ))}
