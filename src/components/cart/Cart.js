@@ -12,9 +12,9 @@ const Cart = (props) => {
     0
   );
   return (
-    <div>
-      <h1>this is cart : {cart.length}</h1>
-      <p>total populatio : {totalPopulation}</p>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Cart count : {cart.length}</h1>
+      <p>Total population : {totalPopulation}</p>
     </div>
   );
 };

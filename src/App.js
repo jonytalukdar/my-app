@@ -18,16 +18,17 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div>
       <Cart cart={cart}></Cart>
-      <h1>Country added : {cart.length}</h1>
-      {country.map((countryDetails) => (
-        <Country
-          country={countryDetails}
-          handleClick={handleClick}
-          key={countryDetails.alpha3Code}
-        ></Country>
-      ))}
+      <div className="App">
+        {country.map((countryDetails) => (
+          <Country
+            country={countryDetails}
+            handleClick={handleClick}
+            key={countryDetails.alpha3Code}
+          ></Country>
+        ))}
+      </div>
     </div>
   );
 };
