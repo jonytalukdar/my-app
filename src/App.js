@@ -31,6 +31,13 @@ class App extends React.Component {
     }
   };
 
+  stopTimer = () => {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  };
+
   render() {
     return (
       <div style={{ textAlign: 'center' }}>
@@ -42,7 +49,7 @@ class App extends React.Component {
         <button onClick={this.increaseCount}>+</button>
         <br />
         <button onClick={this.startTimer}>Start</button>
-        <button>Stop</button>
+        <button onClick={this.stopTimer}>Stop</button>
         <button>Reset</button>
       </div>
     );
