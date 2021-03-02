@@ -38,6 +38,12 @@ class App extends React.Component {
     }
   };
 
+  resetTimer = () => {
+    this.setState({ count: 0 });
+    clearInterval(this.intervalId);
+    this.intervalId = null;
+  };
+
   render() {
     return (
       <div style={{ textAlign: 'center' }}>
@@ -50,7 +56,7 @@ class App extends React.Component {
         <br />
         <button onClick={this.startTimer}>Start</button>
         <button onClick={this.stopTimer}>Stop</button>
-        <button>Reset</button>
+        <button onClick={this.resetTimer}>Reset</button>
       </div>
     );
   }
