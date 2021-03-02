@@ -10,15 +10,24 @@ class App extends React.Component {
   };
 
   decreaseCount = () => {
-    this.setState({ count: this.state.count - 1 });
+    if (this.state.count > 0) {
+      this.setState({ count: this.state.count - 1 });
+    }
   };
 
   render() {
     return (
-      <div>
-        <h1>Count : {this.state.count}</h1>
-        <button onClick={this.increaseCount}>increase</button>
-        <button onClick={this.decreaseCount}>decrease</button>
+      <div style={{ textAlign: 'center' }}>
+        <h1>
+          {' '}
+          <span>{this.state.count}</span>
+        </h1>
+        <button onClick={this.decreaseCount}>-</button>
+        <button onClick={this.increaseCount}>+</button>
+        <br />
+        <button>Start</button>
+        <button>Stop</button>
+        <button>Reset</button>
       </div>
     );
   }
