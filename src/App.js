@@ -3,6 +3,7 @@ import React from 'react';
 // import State from './components/state/State';
 // import Events from './components/events/Events';
 // import Timer from './components/Timer/Timer';
+import Bootstrap from './components/bootstrap/Bootstrap';
 
 class App extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class App extends React.Component {
       <div>
         {' '}
         <h1 style={{ textAlign: 'center' }}>Hello React</h1>
+        <Bootstrap></Bootstrap>
       </div>
     );
   }
