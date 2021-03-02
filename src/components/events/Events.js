@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
 class Events extends Component {
+  state = {
+    name: '',
+  };
+
   handleButtonClick = (e) => {
     console.log(e);
     console.log(e.target);
   };
   handleChange = (e) => {
-    console.log(e.target.value);
+    this.setState({ name: e.target.value });
   };
   render() {
     return (
@@ -18,7 +22,9 @@ class Events extends Component {
           onChange={this.handleChange}
           type="text"
           placeholder="enter some text"
+          value={this.state.name}
         />
+        <p>{this.state.name}</p>
       </div>
     );
   }
