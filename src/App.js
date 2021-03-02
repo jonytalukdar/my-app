@@ -1,15 +1,18 @@
 import React from 'react';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.count = 5;
-    this.state = {
-      count: 0,
-    };
-  }
-
+  // constructor(props) {
+  //   super(props);
+  //   this.count = 5;
+  //   this.state = {
+  //     count: 0,
+  //   };
+  // }
   // count = 10;
+
+  state = {
+    count: 0,
+  };
 
   render() {
     // console.log(this.count);
