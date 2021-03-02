@@ -1,6 +1,6 @@
 import React from 'react';
-import State from './components/state/State';
-// import Events from './components/events/Events';
+// import State from './components/state/State';
+import Events from './components/events/Events';
 // import Timer from './components/Timer/Timer';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
       <div>
         {' '}
         <h1 style={{ textAlign: 'center' }}>Hello React</h1>
-        <State></State>
+        <Events></Events>
       </div>
     );
   }
