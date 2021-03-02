@@ -15,16 +15,15 @@ class Events extends Component {
   render() {
     return (
       <div style={{ textAlign: 'center' }}>
-        <h1>this is events</h1>
         <button onClick={this.handleButtonClick}>Click me</button>
         <br />
         <input
           onChange={this.handleChange}
           type="text"
-          placeholder="enter some text"
-          value={this.state.name}
+          placeholder="Enter Your Name"
+          // value={this.state.name}
         />
-        <p>{this.state.name}</p>
+        {this.state.name && <h1>welcome : {this.state.name}</h1>}
       </div>
     );
   }
