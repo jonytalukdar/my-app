@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class State extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-    };
-  }
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //       date: new Date(),
+  //     };
+  //   }
 
+  state = {
+    date: new Date(),
+  };
   componentDidMount() {
     this.clockTimer = setInterval(() => this.tick(), 1000);
   }
