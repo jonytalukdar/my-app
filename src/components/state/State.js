@@ -6,13 +6,18 @@ class State extends Component {
     this.state = {
       date: new Date(),
     };
-    console.log(this.state.date);
   }
 
   componentDidMount() {
-    setInterval(() => {
-      this.setState({ date: new Date() });
-    }, 1000);
+    this.clockTimer = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.clockTimer);
+  }
+
+  tick() {
+    this.setState({ date: new Date() });
   }
 
   render() {
