@@ -14,6 +14,7 @@ const Topheadline = () => {
   const styleGrid = {
     display: 'grid',
     gridTemplateColumns: 'repeat(3,1fr)',
+    gridGap: '10px',
   };
 
   return (
