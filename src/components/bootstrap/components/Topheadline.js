@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Cardcom from './Card';
+import News from './Card';
 
 const Topheadline = () => {
   const [articles, setArticles] = useState([]);
@@ -10,10 +10,16 @@ const Topheadline = () => {
       .then((response) => response.json())
       .then((data) => setArticles(data.articles));
   }, []);
+
+  const styleGrid = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3,1fr)',
+  };
+
   return (
-    <div className="d-flex">
+    <div style={styleGrid}>
       {articles.map((article) => (
-        <Cardcom article={article}></Cardcom>
+        <News article={article}></News>
       ))}
     </div>
   );
