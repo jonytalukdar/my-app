@@ -9,6 +9,7 @@ class Form extends Component {
     birthday: '',
     gender: '',
     agree: false,
+    skills: [],
   };
 
   handleChange = (e) => {
@@ -23,8 +24,21 @@ class Form extends Component {
     });
   };
 
+  handleSkillsChange = (e) => {
+    if (e.target.checked) {
+      this.setState({
+        skills: [...this.state.skills, e.target.value],
+      });
+    } else {
+      const skills = this.state.skills.filter(
+        (skill) => skill !== e.target.value
+      );
+      this.setState({ skills });
+    }
+  };
+
   render() {
-    const { name, country, bio, birthday, agree } = this.state;
+    const { name, country, bio, birthday, agree, skills } = this.state;
     return (
       <div className="input">
         <input
@@ -84,6 +98,41 @@ class Form extends Component {
             onChange={this.handleChange}
           />
           other
+        </div>
+        <div>
+          Skills : <br />
+          <input
+            type="checkbox"
+            name="skills"
+            value="Java"
+            checked={skills.includes('Java')}
+            onChange={this.handleSkillsChange}
+          />
+          Java
+          <input
+            type="checkbox"
+            name="skills"
+            value="JavaScript"
+            checked={skills.includes('JavaScript')}
+            onChange={this.handleSkillsChange}
+          />
+          JavaScript
+          <input
+            type="checkbox"
+            name="skills"
+            value="Python"
+            checked={skills.includes('Python')}
+            onChange={this.handleSkillsChange}
+          />
+          Python
+          <input
+            type="checkbox"
+            name="skills"
+            value="React"
+            checked={skills.includes('React')}
+            onChange={this.handleSkillsChange}
+          />
+          React
         </div>
         <div>
           <input
