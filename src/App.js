@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from './components/formAndInput/Form';
+// import Form from './components/formAndInput/Form';
+import UncontrolForm from './components/formAndInput/UncontrolForm';
 // import Chart from './components/chart/Chart';
 // import Form from './components/formAndInput/Form';
 // import State from './components/state/State';
@@ -13,7 +14,7 @@ class App extends React.Component {
       <div>
         {' '}
         <h1 style={{ textAlign: 'center' }}>Hello React</h1>
-        <Form></Form>
+        <UncontrolForm></UncontrolForm>
       </div>
     );
   }
