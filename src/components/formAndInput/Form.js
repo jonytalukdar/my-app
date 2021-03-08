@@ -7,6 +7,8 @@ class Form extends Component {
     country: '',
     bio: '',
     birthday: '',
+    gender: '',
+    agree: false,
   };
 
   handleChange = (e) => {
@@ -15,8 +17,14 @@ class Form extends Component {
     });
   };
 
+  handleCheckbox = (e) => {
+    this.setState({
+      agree: e.target.checked,
+    });
+  };
+
   render() {
-    const { name, country, bio, birthday } = this.state;
+    const { name, country, bio, birthday, agree } = this.state;
     return (
       <div className="input">
         <input
@@ -54,6 +62,38 @@ class Form extends Component {
           name="birthday"
           value={birthday}
         />
+        <div>
+          <input
+            type="radio"
+            name="gender"
+            value="Male"
+            onChange={this.handleChange}
+          />
+          Male
+          <input
+            type="radio"
+            name="gender"
+            value="Female"
+            onChange={this.handleChange}
+          />{' '}
+          female
+          <input
+            type="radio"
+            name="gender"
+            value="Other"
+            onChange={this.handleChange}
+          />
+          other
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="agree"
+            checked={agree}
+            onChange={this.handleChange}
+          />
+          agree al the term and condition
+        </div>
         <button onClick={() => console.log(this.state)}> Show Data</button>
       </div>
     );
