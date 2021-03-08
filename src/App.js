@@ -1,10 +1,11 @@
 import React from 'react';
+import Form from './components/formAndInput/Form';
 // import Chart from './components/chart/Chart';
 // import Form from './components/formAndInput/Form';
 // import State from './components/state/State';
 // import Events from './components/events/Events';
 // import Timer from './components/Timer/Timer';
-import Bootstrap from './components/bootstrap/Bootstrap';
+// import Bootstrap from './components/bootstrap/Bootstrap';
 
 class App extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class App extends React.Component {
       <div>
         {' '}
         <h1 style={{ textAlign: 'center' }}>Hello React</h1>
-        <Bootstrap></Bootstrap>
+        <Form></Form>
       </div>
     );
   }
